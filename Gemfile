@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-context'
   gem 'rspec-collection_matchers'
+  gem 'devise'
 end
 
 group :development do
