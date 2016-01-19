@@ -39,6 +39,7 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda'
   gem 'shoulda-context'
+  gem 'rspec-collection_matchers'
 end
 
 group :development do
