@@ -1,5 +1,30 @@
 require 'rails_helper'
 
+def sign_in
+ User.create(email: "test@live.com", password: "password", password_confirmation: "password")
+ visit '/restaurants'
+ click_link 'Sign in'
+ fill_in "Email", with: "test@live.com"
+ fill_in "Password", with: "password"
+ click_button 'Log in'
+end
+
+def sign_in2
+  User.create(email: "test2@live.com", password: "password2", password_confirmation: "password2")
+  visit '/restaurants'
+  click_link 'Sign in'
+  fill_in "Email", with: "test2@live.com"
+  fill_in "Password", with: "password2"
+  click_button 'Log in'
+end
+
+def create_restaurant
+  visit '/restaurants'
+  click_link 'Add a restaurant'
+  fill_in 'Name', with: 'Hawksmoor'
+  click_button 'Create Restaurant'
+end
+
 # Specs in this file have access to a helper object that includes
 # the RestaurantsHelper. For example:
 #
